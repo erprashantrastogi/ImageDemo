@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FC31C94F0ECF55470A7E287 /* libPods-FlickerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A481AD9ABCAEF38156AE6B3F /* libPods-FlickerDemo.a */; };
+		B1039792209A2D3C0098F938 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1039791209A2D3C0098F938 /* AppDelegate.m */; };
+		B1039798209A2D3D0098F938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1039796209A2D3D0098F938 /* Main.storyboard */; };
+		B103979A209A2D400098F938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1039799209A2D400098F938 /* Assets.xcassets */; };
+		B103979D209A2D400098F938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B103979B209A2D400098F938 /* LaunchScreen.storyboard */; };
+		B10397A0209A2D400098F938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B103979F209A2D400098F938 /* main.m */; };
+		B10397B7209B6D2F0098F938 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B10397B6209B6D2F0098F938 /* Podfile */; };
+		B10397BB209B714F0098F938 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10397BA209B714F0098F938 /* NetworkManager.m */; };
+		B10397C1209B716E0098F938 /* ImageDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10397C0209B716E0098F938 /* ImageDownloadManager.m */; };
+		B124742C209EE16700113F53 /* ImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B124742B209EE16700113F53 /* ImageOperation.m */; };
+		B1791201209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */; };
+		B1791205209B7BDD003EBE99 /* FlickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791204209B7BDD003EBE99 /* FlickerCollectionViewCell.m */; };
+		B1791209209B7C7F003EBE99 /* FlickerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791208209B7C7F003EBE99 /* FlickerDataModel.m */; };
+		B179120B209B7D88003EBE99 /* FlickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B179120A209B7D87003EBE99 /* FlickerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		359C6550F0B039AC31C42DF4 /* Pods-FlickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerDemo/Pods-FlickerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		658A3E0ED6D02A0F7795842D /* Pods-FlickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerDemo/Pods-FlickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A481AD9ABCAEF38156AE6B3F /* libPods-FlickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B103978D209A2D3C0098F938 /* FlickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1039790209A2D3C0098F938 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1039791209A2D3C0098F938 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1039793209A2D3C0098F938 /* FlickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickerViewController.h; sourceTree = "<group>"; };
+		B1039797209A2D3D0098F938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1039799209A2D400098F938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B103979C209A2D400098F938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B103979E209A2D400098F938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B103979F209A2D400098F938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B10397B6209B6D2F0098F938 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B10397B9209B714F0098F938 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		B10397BA209B714F0098F938 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		B10397BF209B716E0098F938 /* ImageDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloadManager.h; sourceTree = "<group>"; };
+		B10397C0209B716E0098F938 /* ImageDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloadManager.m; sourceTree = "<group>"; };
+		B124742A209EE16700113F53 /* ImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageOperation.h; sourceTree = "<group>"; };
+		B124742B209EE16700113F53 /* ImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageOperation.m; sourceTree = "<group>"; };
+		B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		B1791203209B7BDD003EBE99 /* FlickerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickerCollectionViewCell.h; sourceTree = "<group>"; };
+		B1791204209B7BDD003EBE99 /* FlickerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickerCollectionViewCell.m; sourceTree = "<group>"; };
+		B1791207209B7C7F003EBE99 /* FlickerDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickerDataModel.h; sourceTree = "<group>"; };
+		B1791208209B7C7F003EBE99 /* FlickerDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickerDataModel.m; sourceTree = "<group>"; };
+		B179120A209B7D87003EBE99 /* FlickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickerViewController.m; sourceTree = "<group>"; };
+		B179120C209B80F4003EBE99 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B103978A209A2D3C0098F938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC31C94F0ECF55470A7E287 /* libPods-FlickerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15C432542F97DAA2DFDB2005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A481AD9ABCAEF38156AE6B3F /* libPods-FlickerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1039784209A2D3C0098F938 = {
+			isa = PBXGroup;
+			children = (
+				B10397B6209B6D2F0098F938 /* Podfile */,
+				B103978F209A2D3C0098F938 /* FlickerDemo */,
+				B103978E209A2D3C0098F938 /* Products */,
+				BE7B5B442907D53297392B16 /* Pods */,
+				15C432542F97DAA2DFDB2005 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B103978E209A2D3C0098F938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B103978D209A2D3C0098F938 /* FlickerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B103978F209A2D3C0098F938 /* FlickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B1247429209EE14B00113F53 /* Operation */,
+				B10397B8209B711F0098F938 /* Managers */,
+				B1039790209A2D3C0098F938 /* AppDelegate.h */,
+				B1039791209A2D3C0098F938 /* AppDelegate.m */,
+				B1039793209A2D3C0098F938 /* FlickerViewController.h */,
+				B179120A209B7D87003EBE99 /* FlickerViewController.m */,
+				B1791202209B7B67003EBE99 /* UIElements */,
+				B1791206209B7C5C003EBE99 /* Model */,
+				B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */,
+				B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */,
+				B179120C209B80F4003EBE99 /* Constants.h */,
+				B1039796209A2D3D0098F938 /* Main.storyboard */,
+				B1039799209A2D400098F938 /* Assets.xcassets */,
+				B103979B209A2D400098F938 /* LaunchScreen.storyboard */,
+				B103979E209A2D400098F938 /* Info.plist */,
+				B103979F209A2D400098F938 /* main.m */,
+			);
+			path = FlickerDemo;
+			sourceTree = "<group>";
+		};
+		B10397B8209B711F0098F938 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B10397B9209B714F0098F938 /* NetworkManager.h */,
+				B10397BA209B714F0098F938 /* NetworkManager.m */,
+				B10397BF209B716E0098F938 /* ImageDownloadManager.h */,
+				B10397C0209B716E0098F938 /* ImageDownloadManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B1247429209EE14B00113F53 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				B124742A209EE16700113F53 /* ImageOperation.h */,
+				B124742B209EE16700113F53 /* ImageOperation.m */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		B1791202209B7B67003EBE99 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				B1791203209B7BDD003EBE99 /* FlickerCollectionViewCell.h */,
+				B1791204209B7BDD003EBE99 /* FlickerCollectionViewCell.m */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		B1791206209B7C5C003EBE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1791207209B7C7F003EBE99 /* FlickerDataModel.h */,
+				B1791208209B7C7F003EBE99 /* FlickerDataModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE7B5B442907D53297392B16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				658A3E0ED6D02A0F7795842D /* Pods-FlickerDemo.debug.xcconfig */,
+				359C6550F0B039AC31C42DF4 /* Pods-FlickerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B103978C209A2D3C0098F938 /* FlickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10397A3209A2D400098F938 /* Build configuration list for PBXNativeTarget "FlickerDemo" */;
+			buildPhases = (
+				660AF39EBC95671709500484 /* [CP] Check Pods Manifest.lock */,
+				B1039789209A2D3C0098F938 /* Sources */,
+				B103978A209A2D3C0098F938 /* Frameworks */,
+				B103978B209A2D3C0098F938 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickerDemo;
+			productName = FlickerDemo;
+			productReference = B103978D209A2D3C0098F938 /* FlickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1039785209A2D3C0098F938 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Prashant Rastogi";
+				TargetAttributes = {
+					B103978C209A2D3C0098F938 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = B1039788209A2D3C0098F938 /* Build configuration list for PBXProject "FlickerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1039784209A2D3C0098F938;
+			productRefGroup = B103978E209A2D3C0098F938 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B103978C209A2D3C0098F938 /* FlickerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B103978B209A2D3C0098F938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B103979D209A2D400098F938 /* LaunchScreen.storyboard in Resources */,
+				B103979A209A2D400098F938 /* Assets.xcassets in Resources */,
+				B10397B7209B6D2F0098F938 /* Podfile in Resources */,
+				B1039798209A2D3D0098F938 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		660AF39EBC95671709500484 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1039789209A2D3C0098F938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10397BB209B714F0098F938 /* NetworkManager.m in Sources */,
+				B10397A0209A2D400098F938 /* main.m in Sources */,
+				B1791209209B7C7F003EBE99 /* FlickerDataModel.m in Sources */,
+				B179120B209B7D88003EBE99 /* FlickerViewController.m in Sources */,
+				B1039792209A2D3C0098F938 /* AppDelegate.m in Sources */,
+				B1791205209B7BDD003EBE99 /* FlickerCollectionViewCell.m in Sources */,
+				B10397C1209B716E0098F938 /* ImageDownloadManager.m in Sources */,
+				B1791201209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m in Sources */,
+				B124742C209EE16700113F53 /* ImageOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B1039796209A2D3D0098F938 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1039797209A2D3D0098F938 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B103979B209A2D400098F938 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B103979C209A2D400098F938 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B10397A1209A2D400098F938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B10397A2209A2D400098F938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B10397A4209A2D400098F938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 658A3E0ED6D02A0F7795842D /* Pods-FlickerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXGJD665S4;
+				INFOPLIST_FILE = FlickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = til.FlickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B10397A5209A2D400098F938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359C6550F0B039AC31C42DF4 /* Pods-FlickerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXGJD665S4;
+				INFOPLIST_FILE = FlickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = til.FlickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1039788209A2D3C0098F938 /* Build configuration list for PBXProject "FlickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10397A1209A2D400098F938 /* Debug */,
+				B10397A2209A2D400098F938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10397A3209A2D400098F938 /* Build configuration list for PBXNativeTarget "FlickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10397A4209A2D400098F938 /* Debug */,
+				B10397A5209A2D400098F938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1039785209A2D3C0098F938 /* Project object */;
+}
