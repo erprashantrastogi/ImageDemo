@@ -18,4 +18,5 @@
 @property (nonatomic,strong) NSString *farm;
 
 - (NSString *)getThubnailPath;
+- (NSString *)getLargeImagePath;
 @end

@@ -24,6 +24,12 @@
 
 - (NSString *)getThubnailPath{
     
+    NSString *thubnailPath = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_t.jpg",self.farm,self.server,self.photoId,self.secret];
+    return thubnailPath;
+}
+
+- (NSString *)getLargeImagePath{
+    
     NSString *thubnailPath = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_h.jpg",self.farm,self.server,self.photoId,self.secret];
     return thubnailPath;
 }

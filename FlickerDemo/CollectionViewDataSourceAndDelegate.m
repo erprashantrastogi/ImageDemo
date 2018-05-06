@@ -11,7 +11,7 @@
 #import "FlickerDataModel.h"
 #import "Constants.h"
 #import "NetworkManager.h"
-
+#import "ImageDownloadManager.h"
 
 @class FlickerDataModel;
 @interface CollectionViewDataSourceAndDelegate()
@@ -69,6 +69,7 @@
 }
 
 - (void)updateWithSearchedText:(NSString *)searchedText {
+    [[ImageDownloadManager sharedManager]cancelAllImageOperation];
     self.searchedText = searchedText;
     
     self.pageNumber = 0;

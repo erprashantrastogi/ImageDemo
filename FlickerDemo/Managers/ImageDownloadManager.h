@@ -18,7 +18,10 @@
 
 
 - (void)reducePriorityForImagePath:(NSString *)imageLink;
+- (void)cancelAllImageOperation;
 
 //+(void)downloadImageForLink:(NSString *)imageLink
 //          completionHandler:(void (^)(NSString *requestPath , UIImage *imageObj,NSURL *filePath, NSError *error))completionHandler ;
+
+- (void)imageDownloadedCompleteForURL:(NSURL *)imageURL withImage:(UIImage *)image;
 @end

@@ -10,4 +10,6 @@
 
 @interface ImageOperation : NSOperation
 
+- (id)initWithImageURL:(NSURL *)imageURL;
+
 @end
