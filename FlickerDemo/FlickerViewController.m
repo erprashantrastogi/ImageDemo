@@ -57,4 +57,31 @@
     }
 }
 
+- (IBAction)actionSheetButtonPressed:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Images Per Row"
+                                                                   message:@""
+                                                            preferredStyle:UIAlertControllerStyleActionSheet]; // 1
+    
+    UIAlertAction *firstAction = [UIAlertAction actionWithTitle:@"Four"
+                                                          style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                              [self.dataSourceDelegateObject updateGridWithColumn:4];
+                                                          }];
+    
+    UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"Two"
+                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                              [self.dataSourceDelegateObject updateGridWithColumn:2];
+                                                           }]; 
+    
+    UIAlertAction *threeAction = [UIAlertAction actionWithTitle:@"Three"
+                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                               [self.dataSourceDelegateObject updateGridWithColumn:3];
+                                                           }];
+    
+    [alert addAction:firstAction];
+    [alert addAction:secondAction];
+    [alert addAction:threeAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

@@ -49,7 +49,11 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="3ez-pc-HFZ">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="Change" id="GlA-Sj-z28"/>
+                        <barButtonItem key="rightBarButtonItem" title="Change" id="GlA-Sj-z28">
+                            <connections>
+                                <action selector="actionSheetButtonPressed:" destination="BYZ-38-t0r" id="Uca-i9-j7d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mainCollectionView" destination="kQa-06-9jF" id="88j-bK-PqK"/>

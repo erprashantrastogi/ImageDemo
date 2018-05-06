@@ -13,5 +13,6 @@
 
 - (id)initWithCollectionView:(UICollectionView *)collectionView;
 - (void)updateWithSearchedText:(NSString *)searchedText;
+- (void)updateGridWithColumn:(NSInteger)column;
 
 @end

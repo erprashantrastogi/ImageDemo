@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "NetworkManager.h"
 #import "ImageDownloadManager.h"
+#import "FooterReuseableView.h"
 
 @class FlickerDataModel;
 @interface CollectionViewDataSourceAndDelegate()
@@ -24,6 +25,8 @@
 @property (nonatomic,strong) NSString *searchedText;
 @property (nonatomic,strong) NSMutableArray<FlickerDataModel *> *arrayOfFlickerDataModel;
 
+@property NSInteger columnPerRow;
+
 @end
 
 @implementation CollectionViewDataSourceAndDelegate
@@ -33,14 +36,25 @@
     self = [super init];
     if (self) {
         self.collectionView = collectionView;
+        
+        [self.collectionView registerClass:[FooterReuseableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"myfooter"];
+        
         self.arrayOfFlickerDataModel = [NSMutableArray new];
+        self.columnPerRow = 2;
     }
     return self;
 }
 
 #pragma mark : UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.arrayOfFlickerDataModel.count;
+    if( section == 0){
+        return self.arrayOfFlickerDataModel.count;
+    }
+    return 0;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 2;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,10 +79,16 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(140, 140);
+    
+    CGFloat collectionViewWidth = collectionView.frame.size.width;
+    CGFloat spaces = (self.columnPerRow - 1) * 10;
+    CGFloat cellWidth = (collectionViewWidth - spaces ) / self.columnPerRow;
+    
+    return CGSizeMake(cellWidth, cellWidth);
 }
 
 - (void)updateWithSearchedText:(NSString *)searchedText {
+    self.isFetchRequestInProgress = false;
     [[ImageDownloadManager sharedManager]cancelAllImageOperation];
     self.searchedText = searchedText;
     
@@ -124,8 +144,8 @@
 
 - (NSString *)getSearchPath{
     
+    self.searchedText = [self.searchedText stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     NSString *searchPath = [NSString stringWithFormat:@"%@&api_key=%@&text=%@&per_page=%@&page=%ld&format=json&nojsoncallback=1",kBaseSearchRoute,kFlikerKey,self.searchedText,kPerPageCount,(long)self.pageNumber+1];
-    
     return searchPath;
 }
 
@@ -140,6 +160,33 @@
     }];
     
     return localDataArray;
+}
+
+- (void)updateGridWithColumn:(NSInteger)column {
+    self.columnPerRow = column;
+    NSArray<NSIndexPath *> *indexPathsForVisibleItems = [self.collectionView indexPathsForVisibleItems];
+    [self.collectionView reloadItemsAtIndexPaths:indexPathsForVisibleItems];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return CGSizeZero;
+    }else  if( self.isFetchRequestInProgress){
+        return CGSizeMake(self.collectionView.bounds.size.width, 100);
+    }
+    else{
+        return CGSizeZero;
+    }
+}
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)theCollectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)theIndexPath {
+    
+    FooterReuseableView *theView = [theCollectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"myfooter" forIndexPath:theIndexPath];
+    
+    [theView.loader startAnimating];
+    return theView;
 }
 
 @end
