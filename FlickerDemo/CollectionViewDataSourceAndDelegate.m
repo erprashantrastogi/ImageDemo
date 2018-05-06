@@ -101,7 +101,7 @@
 
 - (void)fetchData{
     
-    if( self.isFetchRequestInProgress ){
+    if( self.isFetchRequestInProgress){
         return;
     }
     
@@ -119,10 +119,14 @@
             NSMutableArray *arrayOfNewData = [self getFlickerDataModelFromServrResponse:listOfPhotos];
             [self updateCollectionViewWithNewData:arrayOfNewData];
         }
-        
         self.isFetchRequestInProgress = false;
+        
+        if( self.pageNumber == self.totalPagesOnServer){
+            [self updateLoaderStatus];
+        }
     } failure:^(NSError *error) {
         self.isFetchRequestInProgress = false;
+        [self updateLoaderStatus];
     }];
 }
 
@@ -180,6 +184,9 @@
     }
 }
 
+- (void)updateLoaderStatus{
+    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)theCollectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)theIndexPath {
     

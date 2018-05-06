@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 @property (strong, nonatomic) CollectionViewDataSourceAndDelegate *dataSourceDelegateObject;
 
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation FlickerViewController
@@ -45,17 +46,25 @@
 
 #pragma mark :UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-//    if( searchText.length > 3){
-//        [self.dataSourceDelegateObject updateWithSearchedText:searchText];
-//    }
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
-    if( searchBar.text.length > 2){
-        [self.dataSourceDelegateObject updateWithSearchedText:searchBar.text];
+    if( searchText.length >= 2){
+        
+        if( !self.timer ){
+            self.timer =  [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(searchTimer) userInfo:nil repeats:false];
+            [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        }
     }
 }
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self.searchBar resignFirstResponder];
+}
+
+- (void)searchTimer {
+    [self.timer invalidate];
+    self.timer = nil;
+    [self.dataSourceDelegateObject updateWithSearchedText:self.searchBar.text];
+}
+
 
 - (IBAction)actionSheetButtonPressed:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Images Per Row"
