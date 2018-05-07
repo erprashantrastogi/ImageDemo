@@ -18,6 +18,8 @@
 		B10397C1209B716E0098F938 /* ImageDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10397C0209B716E0098F938 /* ImageDownloadManager.m */; };
 		B124742C209EE16700113F53 /* ImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B124742B209EE16700113F53 /* ImageOperation.m */; };
 		B1247432209F60F000113F53 /* FooterReuseableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1247431209F60F000113F53 /* FooterReuseableView.m */; };
+		B12504E420A0C6E30018F7D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12504E320A0C6E30018F7D3 /* DetailViewController.m */; };
+		B12504E720A0CC3E0018F7D3 /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B12504E620A0CC3E0018F7D3 /* PushAnimation.m */; };
 		B1791201209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */; };
 		B1791205209B7BDD003EBE99 /* FlickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791204209B7BDD003EBE99 /* FlickerCollectionViewCell.m */; };
 		B1791209209B7C7F003EBE99 /* FlickerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1791208209B7C7F003EBE99 /* FlickerDataModel.m */; };
@@ -46,6 +48,10 @@
 		B124742B209EE16700113F53 /* ImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageOperation.m; sourceTree = "<group>"; };
 		B1247430209F60F000113F53 /* FooterReuseableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooterReuseableView.h; sourceTree = "<group>"; };
 		B1247431209F60F000113F53 /* FooterReuseableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooterReuseableView.m; sourceTree = "<group>"; };
+		B12504E220A0C6E30018F7D3 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B12504E320A0C6E30018F7D3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B12504E520A0CC3E0018F7D3 /* PushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		B12504E620A0CC3E0018F7D3 /* PushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
 		B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSourceAndDelegate.h; sourceTree = "<group>"; };
 		B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		B1791203209B7BDD003EBE99 /* FlickerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickerCollectionViewCell.h; sourceTree = "<group>"; };
@@ -104,6 +110,10 @@
 				B1039791209A2D3C0098F938 /* AppDelegate.m */,
 				B1039793209A2D3C0098F938 /* FlickerViewController.h */,
 				B179120A209B7D87003EBE99 /* FlickerViewController.m */,
+				B12504E220A0C6E30018F7D3 /* DetailViewController.h */,
+				B12504E320A0C6E30018F7D3 /* DetailViewController.m */,
+				B12504E520A0CC3E0018F7D3 /* PushAnimation.h */,
+				B12504E620A0CC3E0018F7D3 /* PushAnimation.m */,
 				B1791202209B7B67003EBE99 /* UIElements */,
 				B1791206209B7C5C003EBE99 /* Model */,
 				B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */,
@@ -262,11 +272,13 @@
 			files = (
 				B10397BB209B714F0098F938 /* NetworkManager.m in Sources */,
 				B10397A0209A2D400098F938 /* main.m in Sources */,
+				B12504E720A0CC3E0018F7D3 /* PushAnimation.m in Sources */,
 				B1791209209B7C7F003EBE99 /* FlickerDataModel.m in Sources */,
 				B179120B209B7D88003EBE99 /* FlickerViewController.m in Sources */,
 				B1039792209A2D3C0098F938 /* AppDelegate.m in Sources */,
 				B1791205209B7BDD003EBE99 /* FlickerCollectionViewCell.m in Sources */,
 				B10397C1209B716E0098F938 /* ImageDownloadManager.m in Sources */,
+				B12504E420A0C6E30018F7D3 /* DetailViewController.m in Sources */,
 				B1791201209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m in Sources */,
 				B1247432209F60F000113F53 /* FooterReuseableView.m in Sources */,
 				B124742C209EE16700113F53 /* ImageOperation.m in Sources */,

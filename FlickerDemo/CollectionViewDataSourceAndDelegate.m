@@ -13,6 +13,9 @@
 #import "NetworkManager.h"
 #import "ImageDownloadManager.h"
 #import "FooterReuseableView.h"
+#import "DetailViewController.h"
+#import "FlickerViewController.h"
+#import "PushAnimation.h"
 
 @class FlickerDataModel;
 @interface CollectionViewDataSourceAndDelegate()
@@ -21,7 +24,8 @@
 @property NSInteger totalPagesOnServer;
 @property NSInteger pageNumber;
 
-@property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,weak) FlickerViewController *viewController;
+@property (nonatomic,weak) UICollectionView *collectionView;
 @property (nonatomic,strong) NSString *searchedText;
 @property (nonatomic,strong) NSMutableArray<FlickerDataModel *> *arrayOfFlickerDataModel;
 
@@ -31,12 +35,12 @@
 
 @implementation CollectionViewDataSourceAndDelegate
 
-- (id)initWithCollectionView:(UICollectionView *)collectionView {
+- (id)initWithCollectionView:(UICollectionView *)collectionView andController:(FlickerViewController *)viewController {
     
     self = [super init];
     if (self) {
         self.collectionView = collectionView;
-        
+        self.viewController = viewController;
         [self.collectionView registerClass:[FooterReuseableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"myfooter"];
         
         self.arrayOfFlickerDataModel = [NSMutableArray new];
@@ -76,6 +80,24 @@
 #pragma mark : UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    FlickerCollectionViewCell *cell = (FlickerCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
+    
+    FlickerDataModel *dataModel = [self.arrayOfFlickerDataModel objectAtIndex:indexPath.row];
+    UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailViewController *detailsVC = [mainSB instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    detailsVC.flickerDataModel = dataModel;
+    detailsVC.thumbnailImage = cell.imgView.image;
+    detailsVC.transitioningDelegate = self.viewController; // <-- Add this line
+    
+    
+    
+    self.viewController.transition.originFrame = [cell.superview convertRect:cell.frame toView:nil];
+    
+    self.viewController.transition.presenting = true;
+    //cell.hidden = true;
+
+    
+    [self.viewController.navigationController pushViewController:detailsVC animated:true];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

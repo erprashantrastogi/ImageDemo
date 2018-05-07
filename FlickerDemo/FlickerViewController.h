@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PushAnimation.h"
 
-@interface FlickerViewController : UIViewController
-
+@interface FlickerViewController : UIViewController<UIViewControllerTransitioningDelegate>
+@property (strong, nonatomic) PushAnimation *transition;
 
 @end
 

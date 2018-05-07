@@ -12,7 +12,6 @@
 
 @interface FlickerCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (nonatomic,strong) __block NSString *imagePathTobeRequest;
 
 @end
@@ -21,7 +20,8 @@
 
 - (void)updateViewWithDataModel:(FlickerDataModel *)flickerDataModel {
     
-    NSLog(@"updateViewWithDataModel");
+    self.imgView.layer.cornerRadius = 5.0;
+    self.imgView.clipsToBounds = true;
     
     NSString *thumbnailPath = [flickerDataModel getThubnailPath];
     self.imagePathTobeRequest = thumbnailPath;
@@ -39,7 +39,7 @@
                 });
             }
             else{
-                NSLog(@"Not a valid image.");
+                //NSLog(@"Not a valid image.");
             }
         }
     }];

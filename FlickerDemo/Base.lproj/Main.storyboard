@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,6 +63,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BkS-Qy-SpM">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Y8T-KE-hgm" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hn1-TC-9vV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WOT-7x-xAU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aWt-vW-nvk" firstAttribute="bottom" secondItem="WOT-7x-xAU" secondAttribute="bottom" id="bAk-Vo-Dgs"/>
+                            <constraint firstItem="WOT-7x-xAU" firstAttribute="top" secondItem="aWt-vW-nvk" secondAttribute="top" id="bfq-VA-nUL"/>
+                            <constraint firstItem="aWt-vW-nvk" firstAttribute="trailing" secondItem="WOT-7x-xAU" secondAttribute="trailing" id="mfy-D2-Ot5"/>
+                            <constraint firstItem="WOT-7x-xAU" firstAttribute="leading" secondItem="aWt-vW-nvk" secondAttribute="leading" id="nam-yy-6yr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aWt-vW-nvk"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WOT-7x-xAU" id="tG2-J0-O8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0W-Sg-N4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L5c-2m-Cly">

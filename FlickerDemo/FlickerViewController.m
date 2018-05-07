@@ -10,7 +10,7 @@
 #import "CollectionViewDataSourceAndDelegate.h"
 #import "NetworkManager.h"
 
-@interface FlickerViewController ()<UISearchBarDelegate>
+@interface FlickerViewController ()<UISearchBarDelegate,UINavigationControllerDelegate>
 @property (strong, nonatomic) UISearchBar *searchBar ;
 @property (strong, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 @property (strong, nonatomic) CollectionViewDataSourceAndDelegate *dataSourceDelegateObject;
@@ -25,6 +25,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self prepareSubViews];
+    self.transition = [[PushAnimation alloc]init];
+    self.navigationController.delegate = self;
 }
 
 - (void)prepareSubViews {
@@ -33,10 +35,12 @@
     self.searchBar.delegate = self;
     self.navigationItem.titleView = self.searchBar;
     
-    self.dataSourceDelegateObject = [[CollectionViewDataSourceAndDelegate alloc]initWithCollectionView:self.mainCollectionView];;
+    self.dataSourceDelegateObject = [[CollectionViewDataSourceAndDelegate alloc]initWithCollectionView:self.mainCollectionView andController:self];;
     
     self.mainCollectionView.dataSource = self.dataSourceDelegateObject;
     self.mainCollectionView.delegate = self.dataSourceDelegateObject;
+    
+    [self.dataSourceDelegateObject updateWithSearchedText:@"krishna"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +95,24 @@
     [alert addAction:threeAction];
     
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController*)fromVC
+                                                 toViewController:(UIViewController*)toVC
+{
+    if (operation == UINavigationControllerOperationPush){
+        return self.transition;
+    }
+    
+    if (operation == UINavigationControllerOperationPop){
+        self.transition.presenting = false;
+        return self.transition;
+    }
+    
+    return nil;
 }
 
 @end

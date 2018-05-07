@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class FlickerViewController;
 @interface CollectionViewDataSourceAndDelegate : NSObject<UICollectionViewDelegate,UICollectionViewDataSource>
 
-- (id)initWithCollectionView:(UICollectionView *)collectionView;
+- (id)initWithCollectionView:(UICollectionView *)collectionView andController:(FlickerViewController *)viewController ;
 - (void)updateWithSearchedText:(NSString *)searchedText;
 - (void)updateGridWithColumn:(NSInteger)column;
 

@@ -11,5 +11,6 @@
 @class FlickerDataModel;
 @interface FlickerCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 - (void)updateViewWithDataModel:(FlickerDataModel *)flickerDataModel;
 @end
