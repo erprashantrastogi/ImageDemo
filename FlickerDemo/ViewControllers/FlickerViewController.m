@@ -40,7 +40,7 @@
     self.mainCollectionView.dataSource = self.dataSourceDelegateObject;
     self.mainCollectionView.delegate = self.dataSourceDelegateObject;
     
-    [self.dataSourceDelegateObject updateWithSearchedText:@"krishna"];
+    [self.dataSourceDelegateObject updateWithSearchedText:@"Flowers"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,28 +49,30 @@
 }
 
 #pragma mark :UISearchBarDelegate
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    if( searchText.length >= 2){
-        
-        if( !self.timer ){
-            self.timer =  [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(searchTimer) userInfo:nil repeats:false];
-            [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-        }
-    }
-}
+//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+//    if( searchText.length >= 2){
+//
+//        if( !self.timer ){
+//            self.timer =  [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(searchTimer) userInfo:nil repeats:false];
+//            [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//        }
+//    }
+//}
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self.searchBar resignFirstResponder];
-}
-
-- (void)searchTimer {
-    [self.timer invalidate];
-    self.timer = nil;
     [self.dataSourceDelegateObject updateWithSearchedText:self.searchBar.text];
 }
 
+//- (void)searchTimer {
+//    [self.timer invalidate];
+//    self.timer = nil;
+//    [self.dataSourceDelegateObject updateWithSearchedText:self.searchBar.text];
+//}
+
 
 - (IBAction)actionSheetButtonPressed:(id)sender {
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Images Per Row"
                                                                    message:@""
                                                             preferredStyle:UIAlertControllerStyleActionSheet]; // 1

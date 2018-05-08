@@ -84,19 +84,16 @@
     
     FlickerDataModel *dataModel = [self.arrayOfFlickerDataModel objectAtIndex:indexPath.row];
     UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     DetailViewController *detailsVC = [mainSB instantiateViewControllerWithIdentifier:@"DetailViewController"];
     detailsVC.flickerDataModel = dataModel;
     detailsVC.thumbnailImage = cell.imgView.image;
-    detailsVC.transitioningDelegate = self.viewController; // <-- Add this line
-    
+    detailsVC.transitioningDelegate = self.viewController;
     
     
     self.viewController.transition.originFrame = [cell.superview convertRect:cell.frame toView:nil];
-    
     self.viewController.transition.presenting = true;
-    //cell.hidden = true;
 
-    
     [self.viewController.navigationController pushViewController:detailsVC animated:true];
 }
 
@@ -190,8 +187,7 @@
 
 - (void)updateGridWithColumn:(NSInteger)column {
     self.columnPerRow = column;
-    NSArray<NSIndexPath *> *indexPathsForVisibleItems = [self.collectionView indexPathsForVisibleItems];
-    [self.collectionView reloadItemsAtIndexPaths:indexPathsForVisibleItems];
+    [self.collectionView reloadData];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section

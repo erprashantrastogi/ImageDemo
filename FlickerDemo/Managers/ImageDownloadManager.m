@@ -82,6 +82,10 @@
 - (void)reducePriorityForImagePath:(NSString *)imageLink{
     ImageOperation *imageOperation = [self.urlToDataTaskMapping objectForKey:imageLink];
     imageOperation.queuePriority = NSOperationQueuePriorityVeryLow;
+    
+    if( imageLink ){
+        [self.urlToCompletionHandlerMapping removeObjectForKey:imageLink];
+    }
 }
 
 - (void)imageDownloadedCompleteForURL:(NSURL *)imageURL withImage:(UIImage *)image {
@@ -93,8 +97,6 @@
     
     if( handler ){
         handler(true,image,imagePath);
-    }else {
-        NSLog(@"Handler not found");
     }
     
     [self.urlToCompletionHandlerMapping removeObjectForKey:imagePath];

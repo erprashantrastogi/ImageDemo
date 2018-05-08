@@ -104,20 +104,15 @@
 		B103978F209A2D3C0098F938 /* FlickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1CB061B20A20E890061F94B /* DataSourceAndDelegates */,
+				B1CB061A20A20E700061F94B /* CustomAnimation */,
+				B1CB061920A20E3F0061F94B /* ViewControllers */,
 				B1247429209EE14B00113F53 /* Operation */,
 				B10397B8209B711F0098F938 /* Managers */,
 				B1039790209A2D3C0098F938 /* AppDelegate.h */,
 				B1039791209A2D3C0098F938 /* AppDelegate.m */,
-				B1039793209A2D3C0098F938 /* FlickerViewController.h */,
-				B179120A209B7D87003EBE99 /* FlickerViewController.m */,
-				B12504E220A0C6E30018F7D3 /* DetailViewController.h */,
-				B12504E320A0C6E30018F7D3 /* DetailViewController.m */,
-				B12504E520A0CC3E0018F7D3 /* PushAnimation.h */,
-				B12504E620A0CC3E0018F7D3 /* PushAnimation.m */,
 				B1791202209B7B67003EBE99 /* UIElements */,
 				B1791206209B7C5C003EBE99 /* Model */,
-				B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */,
-				B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */,
 				B179120C209B80F4003EBE99 /* Constants.h */,
 				B1039796209A2D3D0098F938 /* Main.storyboard */,
 				B1039799209A2D400098F938 /* Assets.xcassets */,
@@ -166,6 +161,35 @@
 				B1791208209B7C7F003EBE99 /* FlickerDataModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B1CB061920A20E3F0061F94B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1039793209A2D3C0098F938 /* FlickerViewController.h */,
+				B179120A209B7D87003EBE99 /* FlickerViewController.m */,
+				B12504E220A0C6E30018F7D3 /* DetailViewController.h */,
+				B12504E320A0C6E30018F7D3 /* DetailViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1CB061A20A20E700061F94B /* CustomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B12504E520A0CC3E0018F7D3 /* PushAnimation.h */,
+				B12504E620A0CC3E0018F7D3 /* PushAnimation.m */,
+			);
+			path = CustomAnimation;
+			sourceTree = "<group>";
+		};
+		B1CB061B20A20E890061F94B /* DataSourceAndDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				B17911FF209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.h */,
+				B1791200209B7A3F003EBE99 /* CollectionViewDataSourceAndDelegate.m */,
+			);
+			path = DataSourceAndDelegates;
 			sourceTree = "<group>";
 		};
 		BE7B5B442907D53297392B16 /* Pods */ = {

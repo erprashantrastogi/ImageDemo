@@ -39,7 +39,7 @@
                 });
             }
             else{
-                //NSLog(@"Not a valid image.");
+                NSLog(@"Not a valid image.");
             }
         }
     }];
